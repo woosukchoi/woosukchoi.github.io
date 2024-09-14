@@ -20,7 +20,7 @@
             <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#" class="current-page">Home</a></li> <!-- Current page link -->
+                    <li><a href="index.html" class="current-page">Home</a></li> <!-- Current page link -->
                     <li><a href="research.html">Research</a></li>
                     <li><a href="files/CV_Woosuk_Choi.pdf">CV</a></li>
                 </ul>
@@ -54,7 +54,7 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             const nav = document.querySelector('.main-nav');
-            nav.classList.toggle('active');
+            nav.classList.toggle('active'); // Toggle the active class to show/hide sidebar
         });
     </script>
 </body>

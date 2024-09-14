@@ -20,7 +20,7 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#" class="current-page">Research</a></li>
+                    <li><a href="research.html" class="current-page">Research</a></li>
                     <li><a href="files/CV_Woosuk_Choi.pdf">CV</a></li>
                 </ul>
             </nav>
@@ -81,5 +81,13 @@
     </div>
 
     <script src="assets/js/collapsible.js"></script> <!-- Optional JS for collapsible functionality -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('.main-nav');
+            nav.classList.toggle('active'); // Toggle the active class to show/hide sidebar
+        });
+    </script>
+    
+    
 </body>
 </html>

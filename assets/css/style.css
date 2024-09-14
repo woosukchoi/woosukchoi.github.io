@@ -10,7 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'MyCustomFont', serif; /* Set Merriweather as the base font */
@@ -113,20 +115,35 @@ main {
     flex: 1 0 auto; /* Allow main content to grow and maintain its space */
     width: 100%;
 }
-
 .main-nav ul {
     list-style: none;
-    display: flex;
-    gap: 40px;
     padding: 0;
     margin: 0;
 }
 
+.main-nav ul li {
+    border-bottom: 1px solid #ddd; /* Optional: add divider lines */
+}
+
 .main-nav ul li a {
+    display: block; /* Make links block elements for uniform size */
+    padding: 10px 20px; /* Uniform padding for consistent height */
+    margin: 0; /* Remove any extra margins */
     text-decoration: none;
-    color: gray;
-    font-weight: normal;
-    font-size: 1.1em;
+    color: #333;
+    font-size: 1em; /* Consistent font size */
+    line-height: 1.5; /* Set line height to ensure consistency */
+    box-sizing: border-box; /* Include padding in height calculation */
+    height: auto; /* Use auto to let padding control the height */
+}
+
+.main-nav ul li a:first-child {
+    padding: 10px 20px; /* Ensure the first child also follows the same padding */
+}
+
+.main-nav.active {
+    display: block; /* Show navigation when active */
+    width: auto; /* Adjust width as needed */
 }
 
 .menu-toggle {
@@ -326,6 +343,15 @@ footer {
     header {
         flex: 0 0 100px; /* Maintain header height */
         height: 100px; /* Fixed height for header */
+        display: flex; /* Use flex layout */
+        justify-content: space-between; /* Space elements to the ends */
+        align-items: center; /* Center elements vertically */
+        justify-content: center; /* Center the title horizontally */
+        padding: 0 20px; /* Add padding for spacing */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
     }
 
     .header-title {
@@ -345,7 +371,8 @@ footer {
         flex-direction: column; /* Change to column to allow header to scroll */
         justify-content: center;
         align-items: center;
-        overflow: auto; /* Prevent scrolling */
+        overflow-x: hidden; /* Prevent scrolling */
+        overflow-y: auto;
         line-height: 1.5; /* Set line spacing to 1.25 */
     }
 
@@ -355,24 +382,27 @@ footer {
         width: 100%; /* Ensure full width */
     }
 
-    .menu-toggle {
-        display: block; /* Show toggle button on mobile */
-        font-size: 1.2em;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 20; /* Ensure it is above other elements */
+    
+    /* Sidebar initial hidden state */
+    .main-nav {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed positioning */
+        top: 0;
+        left: -250px; /* Positioned off-screen to the left */
+        width: 150px; /* Set the width of the sidebar */
+        height: 100vh; /* Full viewport height */
+        background-color: #fff; /* Background color */
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+        z-index: 20; /* Ensure it's above other elements */
+        transition: left 0.3s ease; /* Smooth transition */
+        padding-top: 60px; /* Padding to position links below the header */
+        box-sizing: border-box; /* Include padding and border in width calculation */
     }
 
-    .main-nav {
-        display: none; /* Hide navigation by default on mobile */
-        position: absolute;
-        top: 50px; /* Adjust based on header height */
-        right: 10px; /* Position in the top right */
-        background: #fff;
-        width: auto; /* Adjust width to fit content */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
-        z-index: 10; /* Ensure it appears below the toggle button */
+    /* Sidebar active state */
+    .main-nav.active {
+        display: block; /* Ensure it's displayed */
+        left: 0; /* Slide in from the left */
     }
 
     .main-nav ul {
@@ -381,24 +411,37 @@ footer {
         margin: 0;
         display: flex;
         flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Ensure full width of sidebar */
+        box-sizing: border-box; /* Include padding in width */
     }
 
     .main-nav ul li {
-        border-bottom: 1px solid #ddd; /* Optional: add divider lines */
+        width: 100%; /* Ensure full width */
     }
 
     .main-nav ul li a {
-        padding: 10px 20px; /* Adjust padding for touch targets */
+        display: block; /* Make links block elements */
+        padding: 15px 20px; /* Uniform padding for sidebar links */
+        margin: 0; /* Remove any margins */
         text-decoration: none;
-        color: #333; /* Adjust color */
-        display: block; /* Make links block elements for easier tapping */
-        font-size: 0.8em; /* Smaller font size for navigation links */
-        width: 100%; /* Make all links full width */
-        box-sizing: border-box; /* Include padding in width calculations */
+        color: #333; /* Link color */
+        font-size: 1em; /* Consistent font size */
+        line-height: 1; /* Set consistent line height */
+        box-sizing: border-box; /* Include padding in height calculation */
     }
 
-    .main-nav.active {
-        display: block; /* Show navigation when active */
+    .menu-toggle {
+        display: block; /* Ensure toggle button is visible */
+        font-size: 1.5em;
+        cursor: pointer;
+        position: absolute; /* Fixed position to stay in view */
+        top: 35px; /* Adjust as needed */
+        right: 20px; /* Align to the right */
+        z-index: 30; /* Ensure it's above the sidebar */
+        background: none; /* Remove any background */
+        border: none; /* Remove any border */
+        opacity: 0.3; /* Set transparency level */
+        transition: opacity 0.3s ease; /* Smooth transition for hover effect */
     }
 
     nav ul li a {
@@ -408,11 +451,9 @@ footer {
     /* Adjust logo size for better fit */
     .logo {
         width: 40px; /* Reduce size of logo */
-        position: relative;
-    }
-
-    .logo, .menu-toggle, .header-title {
-        flex: 0 0 auto; /* Prevent flex items from growing */
+        position: absolute;
+        top: 35px;
+        left: 20px;
     }
 
     /* Main content and section headers */
