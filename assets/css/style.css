@@ -120,87 +120,6 @@ main {
     padding: 20px;
 }
 
-@media (min-width: 768px) {
-    .intro {
-        flex-direction: row; /* Place photo next to text on larger screens */
-        align-items: flex-start;
-    }
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    /* Header components */
-    .header-title {
-        font-size: 1.8em; /* Reduce header title size */
-    }
-
-    nav ul li a {
-        font-size: 1em; /* Smaller font size for navigation links */
-    }
-
-    /* Adjust logo size for better fit */
-    .logo {
-        width: 40px; /* Reduce size of logo */
-    }
-
-    /* Main content and section headers */
-    h1, h2, h3, .header-title {
-        font-size: 1.5em; /* General reduction for headers */
-    }
-
-    .paper-title, .paper-title a {
-        font-size: 1em; /* Ensure titles are smaller and fit the screen */
-    }
-
-    /* Adjust padding for main container */
-    .container {
-        padding: 10px; /* Reduce padding for mobile */
-    }
-
-    /* Adjust collapsible button and content */
-    .collapsible {
-        font-size: 0.9em; /* Slightly smaller for mobile */
-    }
-
-    .content p {
-        font-size: 0.9em; /* Reduce paragraph text size slightly */
-    }
-}
-
-/* Further adjustments for very small screens (phones) */
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1.5em; /* Further reduce header title size */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 20px; /* Add more spacing for touch comfort */
-    }
-
-    .logo {
-        width: 30px; /* Further reduce logo size */
-    }
-
-    .paper-title, .paper-title a {
-        font-size: 0.9em; /* Smaller font size for very small screens */
-    }
-
-    /* Adjust margins and padding for better fit */
-    .container {
-        padding: 5px; /* Minimal padding to maximize space */
-    }
-
-    .collapsible {
-        font-size: 0.8em; /* Smaller collapsible button text */
-    }
-
-    .content p {
-        font-size: 0.8em; /* Smaller paragraph text */
-    }
-}
-
-
 .profile-pic {
     width: 300px; /* Increase profile picture size */
     padding: 20px;
@@ -370,4 +289,85 @@ footer {
     margin: 0px 0;
     font-size: 1em;
     font-style: italic;
+}
+
+
+@media (min-width: 768px) {
+    .intro {
+        flex-direction: row; /* Place photo next to text on larger screens */
+        align-items: flex-start;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Header components */
+    .header-title {
+        font-size: 1.8em; /* Reduce header title size */
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Smaller font size for navigation links */
+    }
+
+    /* Adjust logo size for better fit */
+    .logo {
+        width: 40px; /* Reduce size of logo */
+    }
+
+    /* Main content and section headers */
+    h1, h2, h3, .header-title {
+        font-size: 1.5em; /* General reduction for headers */
+    }
+
+    .paper-title, .paper-title a {
+        font-size: 1em; /* Ensure titles are smaller and fit the screen */
+    }
+
+    /* Adjust padding for main container */
+    .container {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    /* Adjust collapsible button and content */
+    .collapsible {
+        font-size: 0.9em; /* Slightly smaller for mobile */
+    }
+
+    .content p {
+        font-size: 0.9em; /* Reduce paragraph text size slightly */
+    }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.5em; /* Further reduce header title size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 20px; /* Add more spacing for touch comfort */
+    }
+
+    .logo {
+        width: 30px; /* Further reduce logo size */
+    }
+
+    .paper-title, .paper-title a {
+        font-size: 0.9em; /* Smaller font size for very small screens */
+    }
+
+    /* Adjust margins and padding for better fit */
+    .container {
+        padding: 5px; /* Minimal padding to maximize space */
+    }
+
+    .collapsible {
+        font-size: 0.8em; /* Smaller collapsible button text */
+    }
+
+    .content p {
+        font-size: 0.8em; /* Smaller paragraph text */
+    }
 }
