@@ -323,8 +323,8 @@ footer {
     /* Header components */
 
     header {
-        flex: 0 0 50px; /* Maintain header height */
-        height: 50px; /* Fixed height for header */
+        flex: 0 0 80px; /* Maintain header height */
+        height: 80px; /* Fixed height for header */
     }
 
     .header-title {
@@ -340,14 +340,13 @@ footer {
 
     .container, .research-section, body > main {
         margin-left: 0 !important; /* Remove left margin on mobile */
-        padding-left: 0px !important; /* Remove left padding on mobile */
-        padding-right: 10px; /* Optional: Add some right padding for better spacing */
+        padding: 10px !important; 
         width: 100%; /* Ensure full width */
     }
 
     .menu-toggle {
         display: block; /* Show toggle button on mobile */
-        font-size: 1.5em;
+        font-size: 1.2em;
         background: none;
         border: none;
         cursor: pointer;
@@ -393,7 +392,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 0.8em; /* Smaller font size for navigation links */
+        font-size: 1em; /* Smaller font size for navigation links */
     }
 
     /* Adjust logo size for better fit */
