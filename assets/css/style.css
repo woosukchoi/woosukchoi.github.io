@@ -355,7 +355,7 @@ footer {
     }
 
     .header-title {
-        font-size: 1.8em; /* Reduce header title size */
+        font-size: 1.4em; /* Reduce header title size */
     }
 
     body:not(.home-page) main {
