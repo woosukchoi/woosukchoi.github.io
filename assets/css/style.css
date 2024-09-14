@@ -323,8 +323,8 @@ footer {
     /* Header components */
 
     header {
-        flex: 0 0 80px; /* Maintain header height */
-        height: 80px; /* Fixed height for header */
+        flex: 0 0 100px; /* Maintain header height */
+        height: 100px; /* Fixed height for header */
     }
 
     .header-title {
@@ -332,9 +332,8 @@ footer {
     }
 
     body:not(.home-page) main {
-        padding: 20px;
         padding-left: 0px; /* Add left padding */
-        flex: 1 0 auto;
+        padding: 20px;
         width: 100%;
     }
 
