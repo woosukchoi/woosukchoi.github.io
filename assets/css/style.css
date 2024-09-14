@@ -323,8 +323,8 @@ footer {
     /* Header components */
 
     header {
-        flex: 0 0 100px; /* Maintain header height */
-        height: 100px; /* Fixed height for header */
+        flex: 0 0 50px; /* Maintain header height */
+        height: 50px; /* Fixed height for header */
     }
 
     .header-title {
