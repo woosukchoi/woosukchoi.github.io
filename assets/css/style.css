@@ -321,6 +321,12 @@ footer {
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     /* Header components */
+
+    header {
+        flex: 0 0 100px; /* Maintain header height */
+        height: 100px; /* Fixed height for header */
+    }
+
     .header-title {
         font-size: 1.8em; /* Reduce header title size */
     }
