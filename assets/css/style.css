@@ -150,6 +150,7 @@ main {
 
 .intro-text {
     max-width: 750px; /* max Text width */
+    margin-left: 20px;
     text-align: left;
 }
 
