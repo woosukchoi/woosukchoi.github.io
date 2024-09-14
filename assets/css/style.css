@@ -94,7 +94,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 10px;
     padding: 0;
     margin: 0;
 }
@@ -122,7 +122,7 @@ main {
 }
 
 .main-nav ul li {
-    border-bottom: 1px solid #ddd; /* Optional: add divider lines */
+    border-bottom: 0px solid #ddd; /* Optional: add divider lines */
 }
 
 .main-nav ul li a {
@@ -359,21 +359,10 @@ footer {
     }
 
     body:not(.home-page) main {
-        font-family: 'MyCustomFont', serif; /* Set Merriweather as the base font */
-        margin: 0;
         padding: 0;
-        padding-left: 0; /* Add left padding */
-        color: #333;
-        background-color: #fff;  /*#f7f7f7;*/
-        width: 100vw; /* Full width of the viewport */
-        height: 100vh; /* Full height of the viewport */
-        display: flex;
-        flex-direction: column; /* Change to column to allow header to scroll */
-        justify-content: center;
-        align-items: center;
-        overflow-x: hidden; /* Prevent scrolling */
-        overflow-y: auto;
-        line-height: 1.5; /* Set line spacing to 1.25 */
+        padding-left: 0;
+        flex: 1 0 auto;
+        width: 100%;
     }
 
     .container, .research-section, body > main {
@@ -458,7 +447,7 @@ footer {
 
     /* Main content and section headers */
     h1, h2, h3, .header-title {
-        font-size: 1.5em; /* General reduction for headers */
+        font-size: 1.2em; /* General reduction for headers */
     }
 
 
@@ -477,7 +466,7 @@ footer {
 
 
     .column h2 {
-        font-size: 1.5em; /* Optional: adjust font size as needed */
+        font-size: 1.2em; /* Optional: adjust font size as needed */
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -490,11 +479,11 @@ footer {
 
     .paper-list {
         margin-left: 0px;
-        padding-left: 0px;
+        padding-left: 20px;
     }
 
-    .paper-title, .paper-title a {
-        font-size: 1em; /* Ensure titles are smaller and fit the screen */
+    .paper-title, .paper-title-linked, .paper-title a, .paper-details {
+        font-size: 0.8em; /* Ensure titles are smaller and fit the screen */
     }
 
     /* Adjust padding for main container */
@@ -504,10 +493,10 @@ footer {
 
     /* Adjust collapsible button and content */
     .collapsible {
-        font-size: 0.9em; /* Slightly smaller for mobile */
+        font-size: 0.7em; /* Slightly smaller for mobile */
     }
 
     .content p {
-        font-size: 0.9em; /* Reduce paragraph text size slightly */
+        font-size: 0.7em; /* Reduce paragraph text size slightly */
     }
 }
