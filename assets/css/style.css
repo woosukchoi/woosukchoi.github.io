@@ -70,19 +70,6 @@ h1, h2, h3, h4, h5, h6, .header-title {
     font-weight: bold; /* Apply bold font weight */
 }
 
-.paper-title a {
-    color:#002855;
-    text-decoration: underline;
-}
-
-.paper-title {
-    display: inline; /* Keep titles inline within list items */
-    font-size: 1.2em;
-    font-weight: bold;
-    color: black; /* Keep the hyperlinked paper title in the current color */
-}
-
-
 a {
     color: #002855; /* Set link color to match page titles */
     text-decoration: underline; /* Optional: remove underline */
@@ -228,6 +215,22 @@ footer {
 
 .paper-list li {
     margin-bottom: 10px; /* Space between list items */
+}
+
+/* Specific color for hyperlinked titles */
+.paper-title-linked {
+    display: inline; /* Keep titles inline within list items */
+    color: #002855; /* Blueish color for linked titles */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.paper-title {
+    display: inline; /* Keep titles inline within list items */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black; /* Keep the hyperlinked paper title in the current color */
 }
 
 .paper-details {
