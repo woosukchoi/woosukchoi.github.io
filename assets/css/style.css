@@ -332,9 +332,20 @@ footer {
     }
 
     body:not(.home-page) main {
-        padding-left: 0px; /* Add left padding */
-        padding: 20px;
-        width: 100%;
+        font-family: 'MyCustomFont', serif; /* Set Merriweather as the base font */
+        margin: 0;
+        padding: 0;
+        padding-left: 0; /* Add left padding */
+        color: #333;
+        background-color: #fff;  /*#f7f7f7;*/
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        display: flex;
+        flex-direction: column; /* Change to column to allow header to scroll */
+        justify-content: center;
+        align-items: center;
+        overflow: auto; /* Prevent scrolling */
+        line-height: 1.5; /* Set line spacing to 1.25 */
     }
 
     .container, .research-section, body > main {
@@ -349,9 +360,6 @@ footer {
         background: none;
         border: none;
         cursor: pointer;
-        position: absolute;
-        top: 20px; /* Adjust as needed */
-        right: 20px; /* Position toggle button in the top right */
         z-index: 20; /* Ensure it is above other elements */
     }
 
@@ -399,6 +407,11 @@ footer {
     /* Adjust logo size for better fit */
     .logo {
         width: 40px; /* Reduce size of logo */
+        position: relative;
+    }
+
+    .logo, .menu-toggle, .header-title {
+        flex: 0 0 auto; /* Prevent flex items from growing */
     }
 
     /* Main content and section headers */
