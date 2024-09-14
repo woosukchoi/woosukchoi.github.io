@@ -408,6 +408,7 @@ footer {
     
     .intro-text {
         max-width: 750px; /* max Text width */
+        margin-left: 0px;
         text-align: left;
     }
 
@@ -420,9 +421,12 @@ footer {
     
     .column {
         padding: 0px;
+        margin-left: 0px;
+        padding-left: 0px;
     }
 
     .paper-list {
+        margin-left: 0px;
         padding-left: 0px;
     }
 
