@@ -24,7 +24,8 @@ body {
     flex-direction: column; /* Change to column to allow header to scroll */
     justify-content: center;
     align-items: center;
-    overflow: auto; /* Prevent scrolling */
+    overflow-x: hidden; /* Prevent scrolling */
+    overflow-y: auto;
     line-height: 1.5; /* Set line spacing to 1.25 */
 }
 
