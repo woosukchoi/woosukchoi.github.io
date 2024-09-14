@@ -384,6 +384,8 @@ footer {
         color: #333; /* Adjust color */
         display: block; /* Make links block elements for easier tapping */
         font-size: 0.8em; /* Smaller font size for navigation links */
+        width: 100%; /* Make all links full width */
+        box-sizing: border-box; /* Include padding in width calculations */
     }
 
     .main-nav.active {
