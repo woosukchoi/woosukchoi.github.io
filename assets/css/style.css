@@ -358,6 +358,34 @@ footer {
         font-size: 1.5em; /* General reduction for headers */
     }
 
+
+    .profile-pic {
+        width: 300px; /* Increase profile picture size */
+        padding: 20px;
+        /*border-radius: 5px;*/
+        margin-bottom: 10px;
+    }
+    
+    .intro-text {
+        max-width: 750px; /* max Text width */
+        text-align: left;
+    }
+
+
+    .column h2 {
+        font-size: 1.5em; /* Optional: adjust font size as needed */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .column {
+        padding: 0px;
+    }
+
+    .paper-list {
+        padding-left: 0px;
+    }
+
     .paper-title, .paper-title a {
         font-size: 1em; /* Ensure titles are smaller and fit the screen */
     }
@@ -374,38 +402,5 @@ footer {
 
     .content p {
         font-size: 0.9em; /* Reduce paragraph text size slightly */
-    }
-}
-
-/* Further adjustments for very small screens (phones) */
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 1.5em; /* Further reduce header title size */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 20px; /* Add more spacing for touch comfort */
-    }
-
-    .logo {
-        width: 30px; /* Further reduce logo size */
-    }
-
-    .paper-title, .paper-title a {
-        font-size: 0.9em; /* Smaller font size for very small screens */
-    }
-
-    /* Adjust margins and padding for better fit */
-    .container {
-        padding: 5px; /* Minimal padding to maximize space */
-    }
-
-    .collapsible {
-        font-size: 0.8em; /* Smaller collapsible button text */
-    }
-
-    .content p {
-        font-size: 0.8em; /* Smaller paragraph text */
     }
 }
