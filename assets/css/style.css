@@ -113,6 +113,25 @@ main {
     width: 100%;
 }
 
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: gray;
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -304,6 +323,25 @@ footer {
     /* Header components */
     .header-title {
         font-size: 1.8em; /* Reduce header title size */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 0;
+    }
+
+    .main-nav ul li {
+        border-bottom: 1px solid #ddd; /* Optional: add divider lines */
+    }
+
+    .main-nav ul li a {
+        padding: 15px 20px;
+        display: block; /* Make links block elements for easier tapping */
+        color: #333; /* Adjust color */
+    }
+
+    .main-nav.active {
+        display: block; /* Show navigation when active */
     }
 
     nav ul li a {
