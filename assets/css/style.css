@@ -1,0 +1,295 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');*/
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/assets/fonts/academicons.eot'); /* For IE9 */
+    src: url('/assets/fonts/academicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/assets/fonts/academicons.woff') format('woff'), /* Modern browsers */
+         url('/assets/fonts/academicons.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/assets/fonts/academicons.svg#MyCustomFont') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'MyCustomFont', serif; /* Set Merriweather as the base font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;  /*#f7f7f7;*/
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Change to column to allow header to scroll */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Prevent scrolling */
+    line-height: 1.5; /* Set line spacing to 1.25 */
+}
+
+/* Styles that apply padding to all pages except the home page */
+body:not(.home-page) main {
+    padding: 20px;
+    padding-left: 100px; /* Add left padding */
+    flex: 1 0 auto;
+    width: 80%;
+}
+
+.container {
+    width: 100%; /* Full width of the display */
+    max-width: 1600px; /* Optional: maximum width for larger displays */
+    margin: 0 auto; /* Center the container */
+    padding: 0; /* Remove padding to make it fit exactly */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack header and main content */
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+header {
+    flex: 0 0 180px; /* Maintain header height */
+    height: 180px; /* Fixed height for header */
+    background-color: #fff; /* Set header background color to white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow to separate header */
+    display: flex;
+    justify-content: center; /* Center the title horizontally */
+    align-items: center; /* Center the title vertically */
+    position: relative; /* Default position to scroll naturally with the page */
+    z-index: 10;
+}
+
+.logo {
+    width: 60px; /* Adjust size as needed */
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Position logo in the top left corner */
+}
+
+h1, h2, h3, h4, h5, h6, .header-title {
+    font-weight: bold; /* Apply bold font weight */
+}
+
+.paper-title a {
+    color:#002855;
+    text-decoration: underline;
+}
+
+.paper-title {
+    display: inline; /* Keep titles inline within list items */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black; /* Keep the hyperlinked paper title in the current color */
+}
+
+
+a {
+    color: #002855; /* Set link color to match page titles */
+    text-decoration: underline; /* Optional: remove underline */
+}
+
+.header-title {
+    font-size: 2.8em;
+    color: #002855;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    right: 60px; /* Position navigation in the top right corner */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: gray; /* Default color for navigation links */
+    font-weight: normal; /* Remove bold from navigation links */
+    font-size: 1.1em; /* Larger font size for navigation */
+}
+
+nav ul li a.current-page {
+    color: black; /* Set current page link color to black */
+}
+
+main {
+    padding: 20px; /* Add padding to the main content */
+    flex: 1 0 auto; /* Allow main content to grow and maintain its space */
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .intro {
+        flex-direction: row; /* Place photo next to text on larger screens */
+        align-items: flex-start;
+    }
+}
+
+.profile-pic {
+    width: 300px; /* Increase profile picture size */
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    max-width: 750px; /* max Text width */
+    text-align: left;
+}
+
+h2 {
+    color: #002855;
+    font-size: 2em;
+    margin: 20px 0 10px;
+}
+
+h3 {
+    color: #002855;
+    font-size: 1.5em;
+    margin: 30px 0 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.intro-text ul {
+    list-style-type: disc; /* Ensure bullet points are shown */
+    margin-left: 20px; /* Add space on the left for indentation */
+    padding-left: 20px; /* Add padding to align the bullets */
+}
+
+.intro-text ul li {
+    margin-bottom: 8px; /* Add space between list items */
+    list-style-position: outside; /* Ensure bullets are outside the list items */
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+
+/* Research Page */
+.research-section {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 20px; /* Add space between the sections */
+    padding: 20px 0;
+}
+
+.column h2 {
+    color: black; /* Set headers in the research sections to black */
+    font-size: 2em; /* Optional: adjust font size as needed */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.column {
+    padding: 20px;
+}
+
+.paper-list {
+    list-style-type: disc; /* Use bullets for list items */
+    padding-left: 20px; /* Indent list */
+    margin: 0; /* Remove margin for clean alignment */
+    font-size: 1em;
+}
+
+.paper-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.paper-details {
+    margin-left: 1px; /* Space between paper title and additional text */
+    color: #333; /* Default color for additional text */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.paper-details em {
+    font-style: italic; /* Apply italic style to <em> elements */
+}
+
+.collapsible {
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    margin: 0; /* Remove margin to align with paper title */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.collapsible::before {
+    content: '▶'; /* Triangle indicator */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Animate the rotation */
+}
+
+.collapsible.active::before {
+    transform: rotate(90deg); /* Rotate triangle when active */
+}
+
+.collapsible.active, .collapsible:hover {
+    background-color: #f0f0f0; /* Change background on hover or active */
+}
+
+.content {
+    padding: 0px 15px;
+    padding-left: 30px;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide content when not expanded */
+    transition: max-height 0.3s ease-out;
+    background-color: #f9f9f9;
+    border-radius: 0px;
+    margin-top: 0px;
+}
+
+.content.expanded {
+    display: inline;
+    max-height: 1000px; /* Allow content to expand fully */
+    overflow: visible; /* Ensure expanded content is fully visible */
+}
+
+.content p {
+    margin: 0px 0;
+    font-size: 1em;
+    font-style: italic;
+}
