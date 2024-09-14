@@ -446,10 +446,13 @@ footer {
     }
 
     /* Main content and section headers */
-    h1, h2, h3, .header-title {
+    h1, h2, h3 {
         font-size: 1.2em; /* General reduction for headers */
     }
 
+    p {
+        font-size: 1.1em;
+    }
 
     .profile-pic {
         width: 300px; /* Increase profile picture size */
