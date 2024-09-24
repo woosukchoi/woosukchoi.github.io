@@ -455,6 +455,10 @@ footer {
         font-size: 1.1em;
     }
 
+    .intro {
+        padding-left: 0px;
+    }
+
     .profile-pic {
         width: 300px; /* Increase profile picture size */
         padding: 20px;
