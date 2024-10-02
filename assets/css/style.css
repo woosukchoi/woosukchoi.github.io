@@ -63,7 +63,7 @@ header {
 }
 
 .logo {
-    width: 60px; /* Adjust size as needed */
+    width: 80px; /* Adjust size as needed */
     position: absolute;
     top: 20px;
     left: 20px; /* Position logo in the top left corner */
@@ -440,7 +440,7 @@ footer {
 
     /* Adjust logo size for better fit */
     .logo {
-        width: 40px; /* Reduce size of logo */
+        width: 50px; /* Reduce size of logo */
         position: absolute;
         top: 35px;
         left: 20px;
